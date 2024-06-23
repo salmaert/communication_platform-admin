@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css">
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+   
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Admin Profile</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+
+
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            
+                            <a class="nav-link collapsed" href="profile.html" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                               My Profile
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Utilisateurs
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="student.html">Student</a>
+                                    <a class="nav-link" href="teacher.html">Teacher</a>
+                                    <a class="nav-link" href="parent.html">Parents</a>
+                                </nav>
+                            </div>
+
+
+
+
+                          
+
+
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Authentification
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+
+
+                            
+                  <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+
+
+                                    <a class="nav-link collapsed" href="subject.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                                      subjects
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+
+                                    <a class="nav-link collapsed" href="homework.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-book-open-reader"></i></div>
+                                      homework
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <a class="nav-link collapsed" href="mess.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-message"></i></div>
+                                     Messages
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+                                    <a class="nav-link collapsed" href="notes.html">
+                                      <div class="sb-nav-link-icon"><i class="fas fa-pen-square"></i></div>
+                                   Notes
+                                      <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                  </a>
+
+                                  <a class="nav-link collapsed" href="schedual.html">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                                Schedual
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+
+                       
+                            
+                        </div>
+                    </div>
+                   
+                </nav>
+            </div>
+
+
+            <div id="layoutSidenav_content">
+
+
+               
+
+
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+
+                        <div class="row">
+
+                            <div class="col-xl-5 col-md-6">
+                                <div class="card bg-info text-white mb-4">
+                                    <div class="card-body">Teachers</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="teacher.html">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-5 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Parents</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="parent.html">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-5 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Students</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="student.html">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-xl-5 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Subjects</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="subject.html">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                       
+                    
+                    </div>
+                </main>
+    
+                   
+        
+
+                <!DOCTYPE html>
+<html>
+<head>
+  <title>Statistiques</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Styles CSS pour la mise en page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .kolchi{
+      display: flex;
+      margin: 0;
+      height: 83%;
+    }
+    .content {
+      margin: 20px;
+    }
+    .chart-container {
+      width: 40%;
+      margin-left: 0;
+     
+    }
+    canvas {
+      margin: 0;
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+    }
+    #chart1{
+      margin-left: 30px;
+    }
+    .photo {
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h2>Performances des élèves</h2>
+    <div class="kolchi">
+      
+      <div class="chart-container">
+        <canvas id="chart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="chart1"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+
+     // Données du diagramme
+     var data = {
+      labels: ['Niveau 1', 'Niveau 2', 'Niveau 3', 'Niveau 4'],
+      datasets: [{
+        label: 'Nombre d\'étudiants',
+        data: [50, 80, 65, 45],
+        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    };
+
+    // Options du diagramme
+    var options = {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100
+        }
+      }
+    };
+
+    // Création du diagramme
+    var ctx = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+ // Données du premier diagramme
+ var data1 = {
+      labels: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin'],
+      datasets: [{
+        label: 'Performances',
+        data: [75, 90, 80, 70, 85, 95],
+        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    };
+
+    // Options du premier diagramme
+    var options1 = {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 100
+        }
+      }
+    };
+
+    // Création du premier diagramme
+    var ctx1 = document.getElementById('chart1').getContext('2d');
+    var chart1 = new Chart(ctx1, {
+      type: 'line',
+      data: data1,
+      options: options1
+    });
+    
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+
+
+        </div>
+                 
+                </body>
+                </html>
+                 
+              
+
+
+               
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+        <script src="calend.js"></script>
+    </body>
+</html>

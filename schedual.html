@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tables - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Admin Profile</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+
+
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            
+                            <a class="nav-link collapsed" href="profile.html" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                               My Profile
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Utilisateurs
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="student.html">Student</a>
+                                    <a class="nav-link" href="teacher.html">Teacher</a>
+                                    <a class="nav-link" href="parent.html">Parents</a>
+                                </nav>
+                            </div>
+
+
+
+
+                          
+
+
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Authentification
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+
+
+                            
+                  <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+
+
+                                    <a class="nav-link collapsed" href="subject.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                                      subjects
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+
+                                    <a class="nav-link collapsed" href="homework.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-book-open-reader"></i></div>
+                                      homework
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <a class="nav-link collapsed" href="mess.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-message"></i></div>
+                                     Messages
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+                                    <a class="nav-link collapsed" href="notes.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-pen-square"></i></div>
+                                     Notes
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+                                    <a class="nav-link collapsed" href="schedual.html">
+                                      <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                                  Schedual
+                                      <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                  </a>
+                            
+                        </div>
+                    </div>
+                   
+                </nav>
+            </div>
+
+            <div id="layoutSidenav_content">
+                <main>
+                   
+
+                  <!DOCTYPE html>
+                  <html>
+                  <head>
+                    <title>Gestion des emplois du temps</title>
+                    <style>
+                      /* Styles CSS pour la mise en page */
+                      body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                      }
+                      
+                      .header {
+                       
+                        padding: 20px;
+                        
+                      }
+                      .content {
+                        margin: 20px;
+                      }
+                      table {
+                              width: 100%;
+                              border-collapse: collapse;
+                              box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                              margin-bottom: 20px;
+                              
+                            }
+                        
+                            th, td {
+                                    padding: 10px;
+                                    text-align: left;
+                                    border-bottom: 1px solid #E6E6E6;
+                        }
+                        
+                            th {
+                                    background-color: #7fa8db;
+                                    color: white;
+                                    border-top: 2px solid white;
+                                    border-bottom: 2px solid white;
+                            }
+                        
+                            td {
+                                    background-color: white;
+                             }
+                      .button {
+                        background-color: #7fa8db;
+                        color: #fff;
+                        border: none;
+                        padding: 10px 20px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        cursor: pointer;
+                        border-radius: 4px;
+                      }
+                    </style>
+                    <script>
+                      // Tableau pour stocker les cours de l'emploi du temps
+                      var emploiDuTemps = [];
+                  
+                      function ajouterCours() {
+                        var matiereInput = document.getElementById('matiere');
+                        var profInput = document.getElementById('professeur');
+                        var classeInput = document.getElementById('classe');
+                        var horaireInput = document.getElementById('horaire');
+                  
+                        var matiere = matiereInput.value;
+                        var professeur = profInput.value;
+                        var classe = classeInput.value;
+                        var horaire = horaireInput.value;
+                  
+                        if (matiere && professeur && classe && horaire) {
+                          // Créer un nouvel objet cours
+                          var cours = {
+                            matiere: matiere,
+                            professeur: professeur,
+                            classe: classe,
+                            horaire: horaire
+                          };
+                  
+                          // Ajouter le cours au tableau de l'emploi du temps
+                          emploiDuTemps.push(cours);
+                  
+                          // Mettre à jour l'affichage de l'emploi du temps
+                          afficherEmploiDuTemps();
+                  
+                          // Réinitialiser les champs du formulaire
+                          matiereInput.value = '';
+                          profInput.value = '';
+                          classeInput.value = '';
+                          horaireInput.value = '';
+                        }
+                      }
+                  
+                      function supprimerCours(index) {
+                        // Supprimer le cours du tableau de l'emploi du temps
+                        emploiDuTemps.splice(index, 1);
+                  
+                        // Mettre à jour l'affichage de l'emploi du temps
+                        afficherEmploiDuTemps();
+                      }
+                  
+                      function afficherEmploiDuTemps() {
+                        var table = document.getElementById('emploiDuTempsTable');
+                        table.innerHTML = ''; // Réinitialiser le contenu de la table
+                  
+                        // Parcourir tous les cours de l'emploi du temps
+                        for (var i = 0; i < emploiDuTemps.length; i++) {
+                          var cours = emploiDuTemps[i];
+                  
+                          // Créer une nouvelle ligne dans la table
+                          var newRow = table.insertRow(-1);
+                  
+                          // Insérer les cellules avec les données du cours
+                          var cellMatiere = newRow.insertCell(0);
+                          var cellProf = newRow.insertCell(1);
+                          var cellClasse = newRow.insertCell(2);
+                          var cellHoraire = newRow.insertCell(3);
+                          var cellActions = newRow.insertCell(4);
+                  
+                          cellMatiere.innerHTML = cours.matiere;
+                          cellProf.innerHTML = cours.professeur;
+                          cellClasse.innerHTML = cours.classe;
+                          cellHoraire.innerHTML = cours.horaire;
+                          cellActions.innerHTML = '<button class="button" onclick="supprimerCours(' + i + ')">Supprimer</button>';
+                        }
+                      }
+                    </script>
+                  </head>
+                  <body>
+                    <div class="header">
+                      <h1>Gestion des emplois du temps</h1>
+                    </div>
+                    <div class="content">
+                      
+                      <table id="emploiDuTempsTable">
+                        <thead>
+                          <tr>
+                            <th>Matière</th>
+                            <th>Professeur</th>
+                            <th>Classe</th>
+                            <th>Horaire</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Les cours seront ajoutés dynamiquement ici -->
+                        </tbody>
+                      </table>
+                      <h2>Ajouter un cours</h2>
+                      <form>
+                        <label for="matiere">Matière :</label>
+                        <input type="text" id="matiere" name="matiere" required><br><br>
+                        <label for="professeur">Professeur :</label>
+                        <input type="text" id="professeur" name="professeur" required><br><br>
+                        <label for="classe">Classe :</label>
+                        <input type="text" id="classe" name="classe" required><br><br>
+                        <label for="horaire">Horaire :</label>
+                        <input type="text" id="horaire" name="horaire" required><br><br>
+                        <button type="button" onclick="ajouterCours()" class="button">Ajouter</button>
+                      </form>
+                    </div>
+                    <script>
+                      // Au chargement de la page, afficher l'emploi du temps initial
+                      afficherEmploiDuTemps();
+                    </script>
+                  </body>
+                  </html>
+                  
+
+
+                </main>
+              
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

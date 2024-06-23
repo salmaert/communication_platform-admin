@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Tables - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html">Admin Profile</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+
+
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div>
+                            
+                            <a class="nav-link collapsed" href="profile.html" >
+                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                               My Profile
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Utilisateurs
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="student.html">Student</a>
+                                    <a class="nav-link" href="teacher.html">Teacher</a>
+                                    <a class="nav-link" href="parent.html">Parents</a>
+                                </nav>
+                            </div>
+
+
+
+
+                          
+
+
+
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                Authentification
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+
+
+
+                            
+                  <div class="collapse" id="collapsePages" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <a class="nav-link" href="login.html">Login</a>
+                                            <a class="nav-link" href="register.html">Register</a>
+                                            <a class="nav-link" href="password.html">Forgot Password</a>
+                                        </nav>
+                                    </div>
+
+
+                                    <a class="nav-link collapsed" href="subject.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                                      subjects
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+
+                                    <a class="nav-link collapsed" href="homework.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-book-open-reader"></i></div>
+                                      homework
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <a class="nav-link collapsed" href="mess.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-message"></i></div>
+                                     Messages
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+                                    <a class="nav-link collapsed" href="notes.html">
+                                        <div class="sb-nav-link-icon"><i class="fas fa-pen-square"></i></div>
+                                     Notes
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+
+                                    <a class="nav-link collapsed" href="schedual.html">
+                                      <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                                  Schedual
+                                      <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                  </a>
+                           
+                        </div>
+                    </div>
+                   
+                </nav>
+            </div>
+
+
+            <div id="layoutSidenav_content">
+                <main>
+                   
+
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                      <title>Gestion des notes</title>
+                      <style>
+                        /* Styles CSS pour la mise en page */
+                        body {
+                          font-family: Arial, sans-serif;
+                          margin: 0;
+                          padding: 0;
+                        }
+                    
+                        .header {
+                          
+                         margin-left: 40px;
+                          padding: 20px;
+                          
+                        }
+                    
+                        .class-selector {
+                          margin-bottom: 20px;
+                          margin-top: 20px;
+                         margin-left:50px;
+                        }
+                    
+                        .class-selector label {
+                          font-weight: bold;
+                          margin-right: 10px;
+                        }
+                    
+                        .class-selector select {
+                          padding: 8px;
+                          border: none;
+                          border-radius: 4px;
+                          background-color: #f1f1f1;
+                        }
+                    
+                        .students-list {
+                          width: 90%;
+                          margin: 0 auto;
+                        }
+                    
+                        table {
+                              width: 100%;
+                              border-collapse: collapse;
+                              box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                              margin-bottom: 20px;
+                              
+                            }
+                        
+                            th, td {
+                                    padding: 10px;
+                                    text-align: left;
+                                    border-bottom: 1px solid #E6E6E6;
+                        }
+                        
+                            th {
+                                    background-color: #7fa8db;
+                                    color: white;
+                                    border-top: 2px solid white;
+                                    border-bottom: 2px solid white;
+                            }
+                        
+                            td {
+                                    background-color: white;
+                             }
+                      </style>
+                    </head>
+                    <body>
+                      <div class="header">
+                        <h1>Gestion des notes</h1>
+                      </div>
+                    
+                      <div class="class-selector">
+                        <label for="select-class">Sélectionner une classe :</label>
+                        <select id="select-class" onchange="afficherNotesParClasse()">
+                          <option value="toutes">Toutes les classes</option>
+                          <option value="classe1">Classe 1</option>
+                          <option value="classe2">Classe 2</option>
+                          <option value="classe3">Classe 3</option>
+                        </select>
+                      </div>
+                    
+                      <div class="students-list">
+                        <table id="notes-table">
+                          <thead>
+                            <tr>
+                              <th>Nom</th>
+                              <th>Prénom</th>
+                              <th>Classe</th>
+                              <th>Mathématiques</th>
+                              <th>Arabe</th>
+                              <th>Français</th>
+                              <th>Histoire</th>
+                            </tr>
+                          </thead>
+                          <tbody id="notes-table-body"></tbody>
+                        </table>
+                      </div>
+                    
+                      <script>
+                        // Données de test
+                        var studentsData = [
+                        { nom: "Eleve1", prenom: "Prenom1", classe: "classe2", mathematiques: 16, arabe: 14, francais: 15, histoire: 17 },
+                        { nom: "Eleve2", prenom: "Prenom2", classe: "classe1", mathematiques: 14, arabe: 15, francais: 12, histoire: 13 },
+                        { nom: "Eleve3", prenom: "Prenom3", classe: "classe1", mathematiques: 13, arabe: 12, francais: 14, histoire: 15 },
+                        { nom: "Eleve4", prenom: "Prenom4", classe: "classe3", mathematiques: 18, arabe: 16, francais: 18, histoire: 15 },
+                        { nom: "Eleve5", prenom: "Prenom5", classe: "classe3", mathematiques: 13, arabe: 19, francais: 11, histoire: 16 },
+                        { nom: "Eleve6", prenom: "Prenom6", classe: "classe3", mathematiques: 15, arabe: 16, francais: 10, histoire: 11 },
+                        { nom: "Eleve7", prenom: "Prenom7", classe: "classe3", mathematiques: 11, arabe: 13, francais: 15, histoire: 17 },
+                        { nom: "Eleve8", prenom: "Prenom8", classe: "classe3", mathematiques: 10, arabe: 12, francais: 18, histoire: 16 },
+                        ];
+                    
+                        function afficherNotesParClasse() {
+                          var classeSelectionnee = document.getElementById("select-class").value;
+                          var tableBody = document.getElementById("notes-table-body");
+                          tableBody.innerHTML = "";
+                    
+                          if (classeSelectionnee === "toutes") {
+                            // Afficher toutes les classes
+                            studentsData.forEach(function(student) {
+                              var row = document.createElement("tr");
+                              row.innerHTML = `
+                                <td>${student.nom}</td>
+                                <td>${student.prenom}</td>
+                                <td>${student.classe}</td>
+                                <td>${student.mathematiques}</td>
+                                <td>${student.arabe}</td>
+                                <td>${student.francais}</td>
+                                <td>${student.histoire}</td>
+                              `;
+                              tableBody.appendChild(row);
+                            });
+                          } else {
+                            // Afficher la classe sélectionnée
+                            var filteredData = studentsData.filter(function(student) {
+                              return student.classe === classeSelectionnee;
+                            });
+                    
+                            filteredData.forEach(function(student) {
+                              var row = document.createElement("tr");
+                              row.innerHTML = `
+                                <td>${student.nom}</td>
+                                <td>${student.prenom}</td>
+                                <td>${student.classe}</td>
+                                <td>${student.mathematiques}</td>
+                                <td>${student.arabe}</td>
+                                <td>${student.francais}</td>
+                                <td>${student.histoire}</td>
+                              `;
+                              tableBody.appendChild(row);
+                            });
+                          }
+                        }
+                    
+                        // Afficher les notes pour la première fois
+                        afficherNotesParClasse();
+                      </script>
+                    </body>
+                    </html>  
+
+
+                </main>
+              
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
